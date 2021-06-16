@@ -92,6 +92,10 @@ const dropdownBaseProps = {
     type: Array as PropType<DropdownMixedOption[]>,
     default: () => []
   },
+  onClickoutside: {
+    type: Boolean,
+    default: true
+  },
   // for menu, not documented
   value: [String, Number] as PropType<Key | null>
 } as const

@@ -55,7 +55,11 @@ export const popoverBodyProps = {
   animated: Boolean,
   /** @deprecated */
   minWidth: Number,
-  maxWidth: Number
+  maxWidth: Number,
+  onClickoutside: {
+    type: Boolean,
+    default: true
+  }
 }
 
 export default defineComponent({
@@ -77,7 +81,7 @@ export default defineComponent({
     const bodyRef = ref<HTMLElement | null>(null)
     const followerEnabledRef = ref(props.show)
     const directivesRef = computed<DirectiveArguments>(() => {
-      const { trigger } = props
+      const { trigger, onClickoutside } = props
       const directives = []
       const {
         positionManuallyRef: { value: positionManually }
@@ -87,6 +91,9 @@ export default defineComponent({
           directives.push([clickoutside, handleClickOutside])
         }
         if (trigger === 'hover') {
+          directives.push([mousemoveoutside, handleMouseMoveOutside])
+        }
+        if (trigger === 'manual' && onClickoutside) {
           directives.push([mousemoveoutside, handleMouseMoveOutside])
         }
       }

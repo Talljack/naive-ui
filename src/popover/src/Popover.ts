@@ -182,6 +182,10 @@ export const popoverBaseProps = {
     type: Boolean as PropType<boolean | undefined>,
     default: undefined
   },
+  onClickoutside: {
+    type: Boolean,
+    default: true
+  },
   /** @deprecated */
   minWidth: Number,
   /** @deprecated */

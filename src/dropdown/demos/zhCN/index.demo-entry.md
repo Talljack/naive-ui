@@ -11,6 +11,7 @@ cascade
 placement
 size
 manual-position
+manual-click
 group-debug
 ```
 
