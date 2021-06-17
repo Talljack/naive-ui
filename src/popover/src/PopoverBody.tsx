@@ -53,13 +53,10 @@ export const popoverBodyProps = {
   shadow: Boolean,
   padded: Boolean,
   animated: Boolean,
+  onClickoutside: Function as PropType<(value: boolean) => void>,
   /** @deprecated */
   minWidth: Number,
-  maxWidth: Number,
-  onClickoutside: {
-    type: Boolean,
-    default: true
-  }
+  maxWidth: Number
 }
 
 export default defineComponent({
@@ -93,8 +90,9 @@ export default defineComponent({
         if (trigger === 'hover') {
           directives.push([mousemoveoutside, handleMouseMoveOutside])
         }
-        if (trigger === 'manual' && onClickoutside) {
-          directives.push([mousemoveoutside, handleMouseMoveOutside])
+      } else {
+        if (onClickoutside) {
+          directives.push([clickoutside, handleClickOutside])
         }
       }
       if (props.displayDirective === 'show') {
@@ -186,8 +184,8 @@ export default defineComponent({
     }
     function handleClickOutside (e: MouseEvent): void {
       if (
-        props.trigger === 'click' &&
-        !getTriggerElement().contains(e.target as Node)
+        (props.trigger === 'click' &&
+        !getTriggerElement().contains(e.target as Node)) || props.onClickoutside
       ) {
         NPopover.handleClickOutside(e)
       }

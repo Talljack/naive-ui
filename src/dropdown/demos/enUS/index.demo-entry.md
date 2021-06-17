@@ -11,6 +11,7 @@ cascade
 placement
 size
 manual-position
+clickoutside
 ```
 
 ## Props
@@ -22,6 +23,7 @@ manual-position
 | keyboard | `boolean` | `true` | Whether is supports keyboard operation. (Be careful about the potential conflicts with other components keyboard operations) |
 | options | `Array<DropdownOption \| DropdownDivider \| DropdownSubmenu>` | `[]` |  |
 | size | `'small'\|'medium'\|'large'\|'huge'` | `'medium'` |  |
+| on-select | `(show: boolean) => void` | `undefined` |  |
 | on-select | `(key: string \| number) => void` | `undefined` |  |
 
 For other props, for example `placement`, please see [Popover Props](popover#Props). Note that `arrow`, `raw` is not available.

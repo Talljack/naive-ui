@@ -1,16 +1,27 @@
-# 手动click
+# 自定义clickoutside
 
-在特殊情况下，你可能想手动定位下拉菜单。比如在一块区域右击以弹出下拉菜单。
+某些情况下你可能想自定义clickoutside事件
 
 ```html
+<div
+  style="width: 200px; height: 200px; background-color: rgba(0, 128, 0, .5);"
+  @contextmenu="handleContextMenu"
+>
+  右击
+</div>
 <n-dropdown
   placement="bottom-start"
   @select="handleSelect"
-  :onClickoutside="true"
+  :x="x"
+  :y="y"
   :options="options"
   :show="showDropdown"
-><n-button :keyboard="false">找个地方休息</n-button>
-</n-dropdown>
+  :onClickoutside='onClickoutside'
+/>
+<br />
+<n-dropdown @select="handleSelect" :onClickoutside='clickInfo' trigger="click" :options="options">
+    <n-button :keyboard="false">点击！</n-button>
+  </n-dropdown>
 ```
 
 ```js
@@ -92,6 +103,12 @@ export default defineComponent({
           xRef.value = e.clientX
           yRef.value = e.clientY
         })
+      },
+      onClickoutside (show) {
+        showDropdownRef.value = show
+      },
+      clickInfo (show) {
+        message.info('click ' + show)
       }
     }
   }

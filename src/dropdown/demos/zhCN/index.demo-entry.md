@@ -11,7 +11,7 @@ cascade
 placement
 size
 manual-position
-manual-click
+clickoutside
 group-debug
 ```
 
@@ -19,12 +19,12 @@ group-debug
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| animated | `boolean` | `true` |  |
+| animated | `boolean` | `true` | 使用动画 |
 | inverted | `boolean` | `false` | 使用反转样式 |
 | keyboard | `boolean` | `true` | 是否支持键盘操作（注意和其他内容键盘操作可能的冲突） |
-| options | `Array<DropdownOption \| DropdownDivider \| DropdownSubmenu>` | `[]` |  |
-| size | `'small'\|'medium'\|'large'\|'huge'` | `'medium'` |  |
-| on-select | `(key: string \| number) => void` | `undefined` |  |
+| options | `Array<DropdownOption \| DropdownDivider \| DropdownSubmenu>` | `[]` | 下拉菜单传入的 options |
+| size | `'small'\|'medium'\|'large'\|'huge'` | `'medium'` | 下拉菜单的尺寸大小 |
+| on-select | `(key: string \| number) => void` | `undefined` |select 选中时触发的回调函数  |
 
 对于其他 Props，例如 `placement`，请参考 [Popover Props](popover#Props)。注意 `arrow`、`raw` 属性不可用。
 
