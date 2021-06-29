@@ -19,11 +19,13 @@ size
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
+| align | `'left' \| 'right' \| 'center'` | `'left'` | Text align in radio button. |
 | checked | `boolean` | `undefined` |  |
 | default-checked | `boolean` | `false` |  |
 | name | `string` | `undefined` | The name attribute of the radio element. If not set, name of `radio-group` will be used. |
 | size | `'small' \| 'medium' \| 'large'` | `'medium'` | 只用于 `n-radio` |
 | value | `string` | `undefined` |  |
+| width | `number` | `undefined` | Radio button width. |
 | on-update:checked | `(check: boolean) => void` | `undefined` |  |
 
 ### RadioGroup Props

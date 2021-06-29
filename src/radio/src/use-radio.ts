@@ -14,6 +14,10 @@ import { warn, call } from '../../_utils'
 import type { MaybeArray } from '../../_utils'
 
 const radioProps = {
+  align: {
+    type: String as PropType<'left' | 'right' | 'center'>,
+    default: 'left'
+  },
   name: String,
   value: {
     type: [String, Number] as PropType<string | number>,
@@ -32,6 +36,7 @@ const radioProps = {
     default: false
   },
   size: String as PropType<'small' | 'medium' | 'large'>,
+  width: Number,
   'onUpdate:checked': [Function, Array] as PropType<
   undefined | MaybeArray<(value: boolean) => void>
   >,
@@ -58,9 +63,8 @@ export interface RadioGroupInjection {
   doUpdateValue: (value: string | number) => void
 }
 
-export const radioGroupInjectionKey: InjectionKey<RadioGroupInjection> = Symbol(
-  'radioGroup'
-)
+export const radioGroupInjectionKey: InjectionKey<RadioGroupInjection> =
+  Symbol('radioGroup')
 
 export interface UseRadio {
   mergedClsPrefix: Ref<string>

@@ -20,12 +20,14 @@ radio-focus-debug
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
+| align | `boolean` | `undefined` | 按钮的对齐方式 |
 | checked | `boolean` | `undefined` |  |
 | default-checked | `boolean` | `false` |  |
 | disabled | `boolean` | `false` |  |
 | name | `string` | `undefined` | 单选按钮 radio 元素的 name 属性。如果没有设定会使用 `n-radio-group` 的 `name` |
 | size | `'small' \| 'medium' \| 'large'` | `'medium'` | 只用于 `n-radio` |
 | value | `string` | `undefined` |  |
+| width | `number` | `undefined` | 按钮的宽度 |
 | on-update:checked-value | `(checked: boolean) => void` | `undefined` |  |
 
 ### RadioGroup Props
