@@ -66,7 +66,8 @@ export default defineComponent({
               (elHeight / textHeight) * radix,
               1
             )
-            textEl.style.transform = `translateX(-50%) translateY(-50%) scale(${ratio})`
+            const ratioVal = isFinite(ratio) ? ratio : 1
+            textEl.style.transform = `translateX(-50%) translateY(-50%) scale(${ratioVal})`
           }
         }
       }

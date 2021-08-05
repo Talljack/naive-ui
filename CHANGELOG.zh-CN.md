@@ -10,6 +10,7 @@
 
 - 修复 `n-slider` 丢失浮点数小数精度，关闭 [#751](https://github.com/TuSimple/naive-ui/issues/751)
 - 修复 `n-data-table` `onUpdatePage` 和 `onUpdatePageSize` 在使用 jsx 时不触发的问题
+- 修复 `n-avatar` 使用 `v-show` 时文本位置显示错误，关闭 [#779](https://github.com/TuSimple/naive-ui/issues/779)
 
 ## 2.16.0 (2021-08-02)
 
