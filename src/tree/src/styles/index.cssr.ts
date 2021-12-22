@@ -28,9 +28,21 @@ export default cB('tree', `
       })
     ])
   ]),
-  cB('tree-node-indent', `
-    height: 0;
-  `),
+  cB('tree-node-indent-line', {
+    position: 'relative'
+  }, [
+    c('&::before', {
+      backgroundColor: 'rgb(229,230,235)',
+      position: 'absolute',
+      left: '50%',
+      boxSizing: 'border-box',
+      width: '1px',
+      transform: 'translate(-50%)',
+      content: '""',
+      top: '-5px',
+      bottom: '-5px'
+    })
+  ]),
   cB('tree-motion-wrapper', [
     cM('expand', [
       fadeInHeightExpandTransition({
@@ -134,8 +146,8 @@ export default cB('tree', `
     cursor: pointer;
     display: inline-flex;
     flex-shrink: 0;
-    height: 24px;
-    width: 24px;
+    height: 16px;
+    width: 16px;
     align-items: center;
     justify-content: center;
     transition: transform .15s var(--n-bezier);

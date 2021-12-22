@@ -267,7 +267,10 @@ const TreeNode = defineComponent({
           {repeat(
             tmNode.level,
             <div
-              class={`${clsPrefix}-tree-node-indent`}
+              class={[
+                `${clsPrefix}-tree-node-indent`,
+                `${clsPrefix}-tree-node-indent-line`
+              ]}
               style={{ flex: `0 0 ${indent}px` }}
             />
           )}
