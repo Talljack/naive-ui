@@ -146,7 +146,7 @@ export default cB('tree', `
     cursor: pointer;
     display: inline-flex;
     flex-shrink: 0;
-    height: 16px;
+    height: 24px;
     width: 16px;
     align-items: center;
     justify-content: center;

@@ -93,6 +93,7 @@ export interface TreeInjection {
   cascadeRef: Ref<boolean>
   mergedCheckStrategyRef: Ref<CheckStrategy>
   selectableRef: Ref<boolean>
+  showLineRef: Ref<boolean>
   pendingNodeKeyRef: Ref<null | Key>
   internalScrollableRef: Ref<boolean>
   internalCheckboxFocusableRef: Ref<boolean>

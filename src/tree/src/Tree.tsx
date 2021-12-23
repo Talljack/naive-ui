@@ -158,6 +158,7 @@ const treeProps = {
     type: Boolean,
     default: true
   },
+  showLine: Boolean,
   indent: {
     type: Number,
     default: 16
@@ -1135,6 +1136,7 @@ export default defineComponent({
       disabledRef: toRef(props, 'disabled'),
       checkableRef: toRef(props, 'checkable'),
       selectableRef: toRef(props, 'selectable'),
+      showLineRef: toRef(props, 'showLine'),
       remoteRef: toRef(props, 'remote'),
       onLoadRef: toRef(props, 'onLoad'),
       draggableRef: toRef(props, 'draggable'),

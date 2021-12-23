@@ -39,7 +39,8 @@ const TreeNode = defineComponent({
       draggingNodeRef,
       droppingPositionRef,
       droppingOffsetLevelRef,
-      indentRef
+      indentRef,
+      showLineRef
     } = NTree
 
     // used for drag and drop
@@ -190,6 +191,12 @@ const TreeNode = defineComponent({
             ? props.tmNode.isLeaf
             : true)
       ),
+      showLine: computed(() => {
+        // if (!showLineRef.value) return []
+        if (props.tmNode.isLastChild) return true
+        console.log(props.tmNode)
+        return true
+      }),
       internalScrollable: NTree.internalScrollableRef,
       draggable: NTree.draggableRef,
       blockLine: NTree.blockLineRef,
@@ -217,6 +224,7 @@ const TreeNode = defineComponent({
       checkable,
       selectable,
       selected,
+      showLine,
       checked,
       highlight,
       draggable,
@@ -269,7 +277,7 @@ const TreeNode = defineComponent({
             <div
               class={[
                 `${clsPrefix}-tree-node-indent`,
-                `${clsPrefix}-tree-node-indent-line`
+                { [`${clsPrefix}-tree-node-indent-line`]: showLine }
               ]}
               style={{ flex: `0 0 ${indent}px` }}
             />
