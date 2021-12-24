@@ -5,9 +5,18 @@
 ### Feats
 
 - Add `n-avatar-group`.
+- `n-popconfirm` uses `n` as CSS vars prefix.
+- `n-gradient-text` uses `n` as CSS vars prefix.
+- `n-form` uses `n` as CSS vars prefix.
+- `n-pagination` uses `n` as CSS vars prefix.
+- `n-loading-bar` uses `n` as CSS vars prefix.
+- `n-empty` uses `n` as CSS vars prefix.
+- `n-list` uses `n` as CSS vars prefix.
+- `n-layout` uses `n` as CSS vars prefix.
 - `n-message` uses `n` as CSS vars prefix.
 - `n-mention` uses `n` as CSS vars prefix.
 - `n-menu` uses `n` as CSS vars prefix.
+- `n-popover` uses `n` as CSS vars prefix.
 - `n-transfer` uses `n` as CSS vars prefix.
 - `n-table` uses `n` as CSS vars prefix.
 - `n-statistic` uses `n` as CSS vars prefix.
@@ -22,10 +31,12 @@
 - `n-cascader` uses `n` as CSS vars prefix.
 - `n-color-picker` uses `n` as CSS vars prefix.
 - `n-checkbox` uses `n` as CSS vars prefix.
+- `n-data-table` uses `n` as CSS vars prefix.
 - `n-date-picker` uses `n` as CSS vars prefix.
 - `n-descriptions` uses `n` as CSS vars prefix.
 - `n-drawer` uses `n` as CSS vars prefix.
 - `n-dropdown` uses `n` as CSS vars prefix.
+- `n-element` uses `n` as CSS vars prefix.
 - `n-rate` uses `n` as CSS vars prefix.
 - `n-radio` uses `n` as CSS vars prefix.
 - `n-progress` uses `n` as CSS vars prefix.
@@ -33,6 +44,11 @@
 - `n-collapse` uses `n` as CSS vars prefix.
 - `n-collapse-transition` uses `n` as CSS vars prefix.
 - `n-thing` uses `n` as CSS vars prefix.
+- `n-carousel` uses `n` as CSS vars prefix.
+- `n-page-header` uses `n` as CSS vars prefix.
+- `n-image` uses `n` as CSS vars prefix.
+- `n-modal` uses `n` as CSS vars prefix.
+- `n-notification` uses `n` as CSS vars prefix.
 
 ### Fixes
 
