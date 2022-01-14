@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## Pending
+
+- Fix `n-carousel` `card` effect slide problem.
+- Fix `n-layout-sider` still occupies 1px after collapsed.
+
+### i18n
+
+- Add esAR locale.
+
+## 2.24.1 (2022-01-12)
+
+### Fixes
+
+- Fix install error.
+
 ## 2.24.0 (2022-01-12)
 
 ### Breaking Changes
